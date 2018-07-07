@@ -7,7 +7,7 @@ public class MakeChange {
 	public static void main(String[] args) {
 		Scanner sc = new Scanner(System.in);
 		int quarters = 25, dimes = 10, nickels = 5, pennies = 1;
-		int hundred = 100, fifty = 50, twenty = 20, ten = 10, five = 5, one = 1;
+		int hundreds = 100, fifties = 50, twenties = 20, tens = 10, fives = 5, ones = 1;
 
 		System.out.print("Please tell me the asking price of the item: \t");
 		double askingPrice = sc.nextDouble();
@@ -28,12 +28,12 @@ public class MakeChange {
 
 		int changeDollars = (int) change;
 		
-		hundred = changeDollars / 100;
-		fifty = (changeDollars % 100) / 50;
-		twenty = (changeDollars % 100 % 50) / 20;
-		ten = (changeDollars % 100 & 50 % 20) / 10;
-		five = (changeDollars % 100 % 50 % 20 % 10) / 5;
-		one = (changeDollars % 100 % 50 % 20 % 10 % 5) / 1;
+		hundreds = changeDollars / 100;
+		fifties = (changeDollars % 100) / 50;
+		twenties = (changeDollars % 100 % 50) / 20;
+		tens = (changeDollars % 100 & 50 % 20) / 10;
+		fives = (changeDollars % 100 % 50 % 20 % 10) / 5;
+		ones = (changeDollars % 100 % 50 % 20 % 10 % 5) / 1;
 		
 		double changeCoins1 = (change * 100.0) - (100 * changeDollars);
 		int changeCoins = (int) changeCoins1;
@@ -43,37 +43,44 @@ public class MakeChange {
 		nickels = (changeCoins % 25 % 10) /5;
 		pennies = (changeCoins % 25 % 10 % 5) /1;
 		
+		do {
+			if (hundreds != 0) {
+				System.out.println("Hundreds: " + hundreds);
+				System.out.println();
+			}
+			if (fifties != 0) {
+				System.out.println("Fifties: " + fifties);
+				System.out.println();
+			}
+			if (twenties != 0) {
+				System.out.println("Twenties: " + twenties);
+				System.out.println();
+			}
+			if (tens != 0) {
+				System.out.println("Tens: " + tens);
+				System.out.println();
+			}
+			if (fives != 0) {
+				System.out.println("Fives: " + fives);
+				System.out.println();
+			}
+			if (ones != 0) {
+				System.out.println("Ones: ");
+				System.out.println();
+			}
+			if ()
+		}
+		
 
 		System.out.println(changeDollars);
 		System.out.println(changeCoins);
+		
+		System.out.println("Hundreds: " + hundreds + "\nFifties: " + fifties + "\nTwenties: " + twenties + "\nTens: " + tens + "\nFives: " + fives + "\nOnes: " + ones);
+		System.out.println("Quarters: " + quarters + "\nDimes: " + dimes + "\nNickels: " + nickels + "\nPennies: " + pennies);
 		
 		
 
 		sc.close();
 	}
-
-	public static void calculateChange() {
-
-	}
-
-	public static double quarters = .25;
-	public static double dimes = .10;
-	public static double nickels = .05;
-	public double pennies = .01;
-
-	public static double quarters(double change) {
-		return change / .25;
-	}
-
-	public static double dimes(double change) {
-		return (change - quarters(change) * .25) / .10;
-	}
-
-	public static double nickels(double change) {
-		return (change - (quarters * (change) * .25) - dimes * (change) * .10 / .05);
-	}
-
-	public static double pennies(double change) {
-		return ((quarters * change * .25) - (dimes * change * .10) - (nickels * change * .05));
-	}
 }
+
