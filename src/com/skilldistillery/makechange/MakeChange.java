@@ -24,7 +24,6 @@ public class MakeChange {
 		double change = Math.round(changeInitial * 100.0) / 100.0;
 
 		System.out.println("Your change due is : " + change);
-		System.out.println(changeInitial);
 
 		int changeDollars = (int) change;
 		
@@ -43,7 +42,6 @@ public class MakeChange {
 		nickels = (changeCoins % 25 % 10) /5;
 		pennies = (changeCoins % 25 % 10 % 5) /1;
 		
-		do {
 			if (hundreds != 0) {
 				System.out.println("Hundreds: " + hundreds);
 			}
@@ -74,18 +72,7 @@ public class MakeChange {
 			if (pennies != 0) {
 				System.out.println("Pennies: " + pennies);
 			}
-			while 
-		}
-		
-
-		System.out.println(changeDollars);
-		System.out.println(changeCoins);
-		
-		System.out.println("Hundreds: " + hundreds + "\nFifties: " + fifties + "\nTwenties: " + twenties + "\nTens: " + tens + "\nFives: " + fives + "\nOnes: " + ones);
-		System.out.println("Quarters: " + quarters + "\nDimes: " + dimes + "\nNickels: " + nickels + "\nPennies: " + pennies);
-		
-		
-
+			
 		sc.close();
 	}
 }
