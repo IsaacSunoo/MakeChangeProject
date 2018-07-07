@@ -25,19 +25,29 @@ public class MakeChange {
 
 		System.out.println("Your change due is : " + change);
 		System.out.println(changeInitial);
+
+		int changeDollars = (int) change;
 		
-			int changeDollars = (int)change;
-			hundred = changeDollars / 100;
-			fifty = (changeDollars % 100) /50;
-			twenty = (changeDollars % 100 % 50) /20;
-			ten = (changeDollars % 100 & 50 % 20) /10;
-			five = (changeDollars % 100 % 50 % 20 % 10) /5;
-			one = (changeDollars % 100 % 50 % 20 % 10 % 5) /1;
-			int changeCoins = ((int)change * 100 - 100)/changeDollars;
-			
-			System.out.println(changeDollars);
-			System.out.println(changeCoins);
-			
+		hundred = changeDollars / 100;
+		fifty = (changeDollars % 100) / 50;
+		twenty = (changeDollars % 100 % 50) / 20;
+		ten = (changeDollars % 100 & 50 % 20) / 10;
+		five = (changeDollars % 100 % 50 % 20 % 10) / 5;
+		one = (changeDollars % 100 % 50 % 20 % 10 % 5) / 1;
+		
+		double changeCoins1 = (change * 100.0) - (100 * changeDollars);
+		int changeCoins = (int) changeCoins1;
+		
+		quarters = changeCoins / 25;
+		dimes = (changeCoins % 25) / 10;
+		nickels = (changeCoins % 25 % 10) /5;
+		pennies = (changeCoins % 25 % 10 % 5) /1;
+		
+
+		System.out.println(changeDollars);
+		System.out.println(changeCoins);
+		
+		
 
 		sc.close();
 	}
