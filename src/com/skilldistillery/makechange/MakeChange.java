@@ -22,15 +22,17 @@ public class MakeChange {
 		
 		double changeInitial = amountTendered - askingPrice;
 		double change = Math.round(changeInitial * 100.0) / 100.0;
-
+		
+		if (change > 0) {
 		System.out.println("Your change due is : " + change);
+		}
 
 		int changeDollars = (int) change;
 		
 		hundreds = changeDollars / 100;
 		fifties = (changeDollars % 100) / 50;
 		twenties = (changeDollars % 100 % 50) / 20;
-		tens = (changeDollars % 100 & 50 % 20) / 10;
+		tens = (changeDollars % 100 % 50 % 20) / 10;
 		fives = (changeDollars % 100 % 50 % 20 % 10) / 5;
 		ones = (changeDollars % 100 % 50 % 20 % 10 % 5) / 1;
 		
@@ -42,34 +44,34 @@ public class MakeChange {
 		nickels = (changeCoins % 25 % 10) /5;
 		pennies = (changeCoins % 25 % 10 % 5) /1;
 		
-			if (hundreds != 0) {
+			if (hundreds != 0 && hundreds > 0) {
 				System.out.println("Hundreds: " + hundreds);
 			}
-			if (fifties != 0) {
+			if (fifties != 0 && fifties > 0) {
 				System.out.println("Fifties: " + fifties);
 			}
-			if (twenties != 0) {
+			if (twenties != 0 && twenties > 0) {
 				System.out.println("Twenties: " + twenties);
 			}
-			if (tens != 0) {
+			if (tens != 0 && tens > 0) {
 				System.out.println("Tens: " + tens);
 			}
-			if (fives != 0) {
+			if (fives != 0 && fives > 0) {
 				System.out.println("Fives: " + fives);
 			}
-			if (ones != 0) {
+			if (ones != 0 && ones > 0) {
 				System.out.println("Ones: " + ones);
 			}
-			if (quarters != 0) {
+			if (quarters != 0 && quarters > 0) {
 				System.out.println("Quarters: " + quarters);
 			}
-			if (dimes != 0) {
+			if (dimes != 0 && dimes > 0) {
 				System.out.println("Dimes: " + dimes);
 			}
-			if (nickels != 0) {
+			if (nickels != 0 && nickels > 0) {
 				System.out.println("Nickels: " + nickels);
 			}
-			if (pennies != 0) {
+			if (pennies != 0 && pennies > 0) {
 				System.out.println("Pennies: " + pennies);
 			}
 			
