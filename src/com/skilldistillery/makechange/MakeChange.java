@@ -44,38 +44,66 @@ public class MakeChange {
 		nickels = (changeCoins % 25 % 10) /5;
 		pennies = (changeCoins % 25 % 10 % 5) /1;
 		
-			if (hundreds != 0 && hundreds > 0) {
-				System.out.println("Hundreds: " + hundreds);
+			if (hundreds == 1 && hundreds > 0) {
+				System.out.println(hundreds + " hundred dollar bill");
 			}
-			if (fifties != 0 && fifties > 0) {
-				System.out.println("Fifties: " + fifties);
+			else if (hundreds > 1) {
+				System.out.println(hundreds + " hundred dollar bills");
 			}
-			if (twenties != 0 && twenties > 0) {
-				System.out.println("Twenties: " + twenties);
+			if (fifties == 1 && fifties > 0) {
+				System.out.println(fifties + " fifty dollar bill");
 			}
-			if (tens != 0 && tens > 0) {
-				System.out.println("Tens: " + tens);
+			else if (fifties >  1) {
+				System.out.println(fifties + " fifty dollar bills");
 			}
-			if (fives != 0 && fives > 0) {
-				System.out.println("Fives: " + fives);
+			if (twenties == 1 && twenties > 0) {
+				System.out.println(twenties + " twenty dollar bill");
 			}
-			if (ones != 0 && ones > 0) {
-				System.out.println("Ones: " + ones);
+			else if (twenties > 1) {
+				System.out.println(twenties + " twenty dollar bills");
 			}
-			if (quarters != 0 && quarters > 0) {
-				System.out.println("Quarters: " + quarters);
+			if (tens == 1 && tens > 0) {
+				System.out.println(tens + " ten dollar bill");
 			}
-			if (dimes != 0 && dimes > 0) {
-				System.out.println("Dimes: " + dimes);
+			else if (tens > 1) {
+				System.out.println(tens + " ten dollar bills");
 			}
-			if (nickels != 0 && nickels > 0) {
-				System.out.println("Nickels: " + nickels);
+			if (fives == 1 && fives > 0) {
+				System.out.println(fives + " five dollar bill");
 			}
-			if (pennies != 0 && pennies > 0) {
-				System.out.println("Pennies: " + pennies);
+			else if (fives > 1) {
+				System.out.println(fives + " five dollar bills");
 			}
-			
+			if (ones == 1 && ones > 0) {
+				System.out.println(ones + " one dollar bill");
+			}
+			else if (ones > 1) {
+				System.out.println(ones + " one dollar bills");
+			}
+			if (quarters == 1 && quarters > 0) {
+				System.out.println(quarters + " quarter");
+			}
+			else if (quarters > 1) {
+				System.out.println(quarters + " quarters");
+			}
+			if (dimes == 1 && dimes > 0) {
+				System.out.println(dimes + " dime");
+			}
+			else if (dimes > 1) {
+				System.out.println(dimes + " dimes");
+			}
+			if (nickels == 1 && nickels > 0) {
+				System.out.println(nickels + " nickels");
+			}
+			else if (nickels > 1) {
+				System.out.println(nickels + " nickels");
+			}
+			if (pennies == 1 && pennies > 0) {
+				System.out.println(pennies + " penny.");
+			}
+			else if (pennies > 1) {
+				System.out.println(pennies + " pennies.");
+			}
 		sc.close();
 	}
 }
-
